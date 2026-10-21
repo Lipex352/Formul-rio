@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing de Landing Page | Stanley Fellipe - Web Designer</title>
+  <meta name="description" content="Formulário oficial de briefing para criação de Landing Pages de alta conversão com Stanley Fellipe - Web Designer.">
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <img src="assets/logo.png" alt="Stanley Fellipe - Web Designer" class="brand-logo-img" id="siteLogo">
+        <div class="brand-text">
+          <div class="brand-title">
+            Stanley Fellipe
+            <span class="brand-badge">Briefing</span>
+          </div>
+          <span class="brand-subtitle">Web Designer • Landing Pages de Alta Conversão</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Etapa 1 • Planejamento Estratégico
+      </div>
+      <h1 class="hero-title">
+        Construção da sua <span class="highlight">Landing Page</span>
+      </h1>
+      <p class="hero-description">
+        Preencha os campos abaixo com as informações do seu negócio. Essas respostas serão a base para criarmos uma página moderna, veloz e estruturada para gerar vendas.
+      </p>
+
+      <div class="hero-features">
+        <div class="hero-feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Salvamento automático de rascunho
+        </div>
+        <div class="hero-feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Tempo estimado: 5 a 8 minutos
+        </div>
+        <div class="hero-feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          Dados 100% seguros
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Indicator Card -->
+    <div class="progress-card">
+      <div class="progress-header">
+        <span class="progress-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 14 10"></polyline>
+          </svg>
+          Progresso de Preenchimento
+        </span>
+        <span class="progress-counter" id="progressCount">0 de 8 campos preenchidos</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div style="display: flex; justify-content: flex-end; font-size: 0.78rem; color: var(--text-dim);">
+        <span id="progressPercent">0%</span>
+      </div>
+    </div>
+
+    <!-- Briefing Form -->
+    <form id="briefingForm" class="form-wrapper" novalidate>
+      
+      <!-- SEÇÃO 1: CONTATO & LOCALIZAÇÃO -->
+      <section class="form-section" id="secContact">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="section-title-wrap">
+            <span class="section-number">Parte 1 de 4</span>
+            <h2 class="section-title">Canais de Contato & Localização</h2>
+            <p class="section-desc">Canais que serão integrados aos botões de ação (CTA) da sua Landing Page.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <!-- WhatsApp -->
+          <div class="form-group">
+            <label for="whatsapp" class="form-label">
+              Número para Contato (WhatsApp)
+              <span class="label-required">*</span>
+            </label>
+            <div class="input-container">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <input type="tel" id="whatsapp" name="whatsapp" class="form-input has-icon" placeholder="(11) 99999-9999" required autocomplete="tel" />
+            </div>
+            <span class="form-helper">O número principal para onde os visitantes da página serão direcionados.</span>
+          </div>
+
+          <!-- E-mail -->
+          <div class="form-group">
+            <label for="email" class="form-label">
+              E-mail de Contato
+              <span class="label-required">*</span>
+            </label>
+            <div class="input-container">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <input type="email" id="email" name="email" class="form-input has-icon" placeholder="seuemail@empresa.com.br" required autocomplete="email" />
+            </div>
+            <span class="form-helper">E-mail comercial para exibição no rodapé ou recebimento de leads.</span>
+          </div>
+
+          <!-- Endereço (se necessário) -->
+          <div class="form-group col-span-2">
+            <label class="form-label">
+              Endereço Físico
+              <span class="label-optional">Opcional</span>
+            </label>
+            
+            <label class="checkbox-card" id="checkboxCardEndereco">
+              <input type="checkbox" id="semEnderecoFisico" style="display: none;">
+              <span class="custom-checkbox">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span class="checkbox-text">Meu negócio é 100% digital / Não possuo atendimento físico ao público</span>
+            </label>
+
+            <div id="enderecoInputGroup" class="input-container">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <input type="text" id="endereco" name="endereco" class="form-input has-icon" placeholder="Ex: Av. Paulista, 1000 - Sala 42, São Paulo - SP" />
+            </div>
+            <span class="form-helper">Preencha caso deseje incluir mapa do Google ou localização física na Landing Page.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 2: SEGMENTO & SERVIÇOS -->
+      <section class="form-section" id="secServices">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="section-title-wrap">
+            <span class="section-number">Parte 2 de 4</span>
+            <h2 class="section-title">Segmento & Serviços Oferecidos</h2>
+            <p class="section-desc">Defina o foco central da Landing Page e o que você vai vender ao seu cliente.</p>
+          </div>
+        </div>
+
+        <div class="form-grid single-col">
+          <!-- Segmento da LP -->
+          <div class="form-group">
+            <label for="segmento" class="form-label">
+              Segmento da Landing Page (O que ela irá apresentar para o cliente)
+              <span class="label-required">*</span>
+            </label>
+            <input type="text" id="segmento" name="segmento" class="form-input" placeholder="Ex: Clínica odontológica focada em implantes e lentes de resina" required />
+            <span class="form-helper">Qual é o seu nicho de atuação e qual produto/solução principal será destacado na página?</span>
+          </div>
+
+          <!-- Serviços Oferecidos -->
+          <div class="form-group">
+            <label for="servicos" class="form-label">
+              Serviços Oferecidos
+              <span class="label-required">*</span>
+            </label>
+            <textarea id="servicos" name="servicos" class="form-textarea" placeholder="Descreva os principais serviços ou pacotes que devem ser destacados na página. Ex:
+1. Implantes com carga imediata
+2. Lentes de contato dental e facetas
+3. Clareamento a laser com tecnologia alemã" required></textarea>
+            <span class="form-helper">Liste os serviços que comporão os blocos ou cards de produtos da sua Landing Page.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3: IDENTIDADE & DIFERENCIAIS -->
+      <section class="form-section" id="secBrand">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="section-title-wrap">
+            <span class="section-number">Parte 3 de 4</span>
+            <h2 class="section-title">Diferenciais & Quem Somos</h2>
+            <p class="section-desc">Elementos de autoridade e valor para convencer o cliente a escolher você.</p>
+          </div>
+        </div>
+
+        <div class="form-grid single-col">
+          <!-- Diferenciais -->
+          <div class="form-group">
+            <label for="diferenciais" class="form-label">
+              Diferenciais do Negócio
+              <span class="label-required">*</span>
+            </label>
+            <textarea id="diferenciais" name="diferenciais" class="form-textarea" placeholder="Por que o cliente deve escolher você e não a concorrência? Ex:
+• Atendimento 100% humanizado e sem filas
+• Equipamentos modernos com tecnologia 3D
+• Garantia estendida de 1 ano
+• Mais de 10 anos de atuação sólida no mercado" required></textarea>
+            <span class="form-helper">Os pontos fortes que serão transformados em ícones e destaques visuais chamativos.</span>
+          </div>
+
+          <!-- Quem Somos -->
+          <div class="form-group">
+            <label for="quemSomos" class="form-label">
+              Quem Somos (Apresentação & Autoridade)
+              <span class="label-required">*</span>
+            </label>
+            <textarea id="quemSomos" name="quemSomos" class="form-textarea" placeholder="Conte brevemente sobre sua história, fundadores, missão e tempo de mercado. Ex:
+Fundada pelo Dr. João Silva, nossa clínica nasceu com a missão de transformar sorrisos com excelência e conforto..." required></textarea>
+            <span class="form-helper">Texto que será adaptado para a seção institucional sobre a empresa ou profissional.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4: INFORMAÇÕES ADICIONAIS & CASES -->
+      <section class="form-section" id="secAdditional">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </div>
+          <div class="section-title-wrap">
+            <span class="section-number">Parte 4 de 4</span>
+            <h2 class="section-title">Informações Adicionais & Prova Social</h2>
+            <p class="section-desc">Cases de sucesso, resultados comprovados, depoimentos ou empresas clientes atendidas.</p>
+          </div>
+        </div>
+
+        <div class="form-grid single-col">
+          <!-- Informações Adicionais / Cases -->
+          <div class="form-group">
+            <label for="infoAdicionais" class="form-label">
+              Informações Adicionais (Cases, Resultados, Depoimentos, Empresas Atendidas)
+              <span class="label-optional">Recomendado</span>
+            </label>
+            <textarea id="infoAdicionais" name="infoAdicionais" class="form-textarea tall" placeholder="Insira números marcantes, cases de clientes que tiveram ótimos resultados, links do Google Drive com fotos/vídeos/logo da sua marca, empresas que você já atendeu, etc. Ex:
+• Mais de 2.000 clientes atendidos
+• 98% de satisfação no Google Avaliações
+• Empresas parceiras: Empresa X, Empresa Y
+• Link das fotos em alta resolução: https://drive.google.com/..."></textarea>
+            <span class="form-helper">Dados extras que darão credibilidade e peso à sua Landing Page.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Submit Section -->
+      <div class="form-footer">
+        <button type="submit" class="btn-submit-primary" id="btnSubmitBriefing">
+          <span>Enviar Briefing Estratégico</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+
+        <div class="form-security-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Suas respostas são sincronizadas imediatamente com o painel do Stanley Fellipe.
+        </div>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+      <div class="modal-icon-badge">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+
+      <h2 class="modal-title">Briefing Enviado!</h2>
+      <p class="modal-text">
+        As respostas foram salvas com sucesso. Você pode também enviar o resumo formatado diretamente para o WhatsApp do Stanley para agilizar o início do projeto.
+      </p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-whatsapp-send" id="btnModalWhatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+          </svg>
+          Enviar Cópia no WhatsApp do Stanley
+        </button>
+
+        <button type="button" class="btn-secondary-action" id="btnModalDownload">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Baixar Resumo em Arquivo (.txt)
+        </button>
+
+
+
+        <button type="button" class="btn-close-modal" id="btnCloseModal">
+          Fechar esta janela
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">
+        &lt;SF&gt; <span>Stanley Fellipe</span> • Web Designer
+      </p>
+      <p>Desenvolvimento focado em estética refinada, performance e alta conversão.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/form.js"></script>
+
+  <!-- Acesso secreto ao painel: triple-click na logo -->
+  <script>
+  (function() {
+    let clickCount = 0;
+    let clickTimer = null;
+    const logo = document.getElementById('siteLogo');
+    if (logo) {
+      logo.addEventListener('click', function(e) {
+        e.preventDefault();
+        clickCount++;
+        if (clickCount === 1) {
+          clickTimer = setTimeout(function() { clickCount = 0; }, 600);
+        }
+        if (clickCount >= 3) {
+          clearTimeout(clickTimer);
+          clickCount = 0;
+          window.location.href = 'admin.html';
+        }
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

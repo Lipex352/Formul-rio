@@ -1,0 +1,17 @@
+[
+  {
+    "id": "briefing_inicial_demo",
+    "createdAt": "2026-10-21T12:00:00.000Z",
+    "displayDate": "21/10/2026 às 12:00",
+    "status": "novo",
+    "segmento": "Clínica de Estética & Harmonização Facial",
+    "servicos": "1. Harmonização Orofacial e Preenchimento Labial\n2. Botox Preventivo e Reparador\n3. Bioestimuladores de Colágeno\n4. Limpeza de Pele Profunda e Protocolo Glow",
+    "whatsapp": "(11) 98765-4321",
+    "email": "contato@clinicaradiance.com.br",
+    "endereco": "Av. Paulista, 1578 - Bela Vista, São Paulo - SP",
+    "semEnderecoFisico": false,
+    "diferenciais": "Atendimento VIP exclusivo; Mais de 12 anos de experiência; Equipamentos de tecnologia 3D; Produtos importados com selo ANVISA.",
+    "quemSomos": "Fundada pela Dra. Camila Rocha, a Radiance Estética é referência em procedimentos faciais seguros, modernos e com resultados naturais.",
+    "infoAdicionais": "Mais de 3.500 procedimentos realizados com sucesso; Avaliação 4.9 estrelas no Google; Destaque na revista Saúde & Estética."
+  }
+]
