@@ -381,21 +381,37 @@ Fundada pelo Dr. João Silva, nossa clínica nasceu com a missão de transformar
   (function() {
     let clickCount = 0;
     let clickTimer = null;
-    const logo = document.getElementById('siteLogo');
-    if (logo) {
-      logo.addEventListener('click', function(e) {
-        e.preventDefault();
+    const triggerElements = [
+      document.getElementById('siteLogo'),
+      document.querySelector('.brand-wrapper')
+    ].filter(Boolean);
+
+    function triggerAdmin() {
+      window.location.href = 'admin.html';
+    }
+
+    triggerElements.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', function(e) {
         clickCount++;
-        if (clickCount === 1) {
-          clickTimer = setTimeout(function() { clickCount = 0; }, 600);
-        }
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(function() { clickCount = 0; }, 1500);
+
         if (clickCount >= 3) {
           clearTimeout(clickTimer);
           clickCount = 0;
-          window.location.href = 'admin.html';
+          triggerAdmin();
         }
       });
-    }
+    });
+
+    // Atalho de teclado secreto: Ctrl + Shift + A
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        triggerAdmin();
+      }
+    });
   })();
   </script>
 </body>
