@@ -76,12 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Progress Tracker (8 fields)
+  // 3. Progress Tracker (9 fields)
   const trackedFieldIds = [
     'segmento',
     'servicos',
     'whatsapp',
     'email',
+    'cores',
     'diferenciais',
     'quemSomos',
     'infoAdicionais'
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateProgress() {
     let filled = 0;
-    const totalFields = 8; // 7 base fields + endereco (or digital check)
+    const totalFields = 9; // 8 base fields + endereco (or digital check)
 
     trackedFieldIds.forEach(id => {
       const el = document.getElementById(id);
@@ -112,6 +113,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (progressPercent) progressPercent.textContent = `${percent}%`;
   }
 
+  // Color chips handler
+  const coresTextarea = document.getElementById('cores');
+  document.querySelectorAll('.color-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const colorVal = chip.getAttribute('data-color');
+      if (!coresTextarea || !colorVal) return;
+
+      document.querySelectorAll('.color-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      if (!coresTextarea.value.trim()) {
+        coresTextarea.value = colorVal;
+      } else if (!coresTextarea.value.includes(colorVal)) {
+        coresTextarea.value = coresTextarea.value.trim() + '\n• Paleta selecionada: ' + colorVal;
+      }
+      updateProgress();
+      saveDraft();
+      showToast('Paleta aplicada ao campo de cores!', 'info');
+    });
+  });
+
   // Listen to inputs
   form.querySelectorAll('input, textarea').forEach(input => {
     input.addEventListener('input', () => {
@@ -130,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         email: document.getElementById('email')?.value || '',
         endereco: document.getElementById('endereco')?.value || '',
         semEnderecoFisico: semEnderecoCheckbox?.checked || false,
+        cores: document.getElementById('cores')?.value || '',
         diferenciais: document.getElementById('diferenciais')?.value || '',
         quemSomos: document.getElementById('quemSomos')?.value || '',
         infoAdicionais: document.getElementById('infoAdicionais')?.value || ''
@@ -159,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (parentCard) parentCard.classList.add('checked');
         enderecoGroup.style.display = 'none';
       }
+      if (data.cores) document.getElementById('cores').value = data.cores;
       if (data.diferenciais) document.getElementById('diferenciais').value = data.diferenciais;
       if (data.quemSomos) document.getElementById('quemSomos').value = data.quemSomos;
       if (data.infoAdicionais) document.getElementById('infoAdicionais').value = data.infoAdicionais;
@@ -178,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const servicos = document.getElementById('servicos').value.trim();
     const whatsapp = document.getElementById('whatsapp').value.trim();
     const email = document.getElementById('email').value.trim();
+    const cores = document.getElementById('cores').value.trim();
     const diferenciais = document.getElementById('diferenciais').value.trim();
     const quemSomos = document.getElementById('quemSomos').value.trim();
     const infoAdicionais = document.getElementById('infoAdicionais').value.trim();
@@ -185,8 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const endereco = semEndereco ? 'Negócio 100% Digital / Sem endereço físico' : document.getElementById('endereco').value.trim();
 
     // Required checks
-    if (!segmento || !servicos || !whatsapp || !email) {
-      showToast('Por favor, preencha os campos obrigatórios (Segmento, Serviços, WhatsApp e E-mail).', 'error');
+    if (!segmento || !servicos || !whatsapp || !email || !cores) {
+      showToast('Por favor, preencha os campos obrigatórios (Segmento, Serviços, WhatsApp, E-mail e Cores/Identidade Visual).', 'error');
       return;
     }
 
@@ -207,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
       email,
       endereco: endereco || 'Não informado',
       semEnderecoFisico: semEndereco,
+      cores: cores || 'A definir pelo designer',
       diferenciais: diferenciais || 'Não informado',
       quemSomos: quemSomos || 'Não informado',
       infoAdicionais: infoAdicionais || 'Nenhuma informação adicional inserida.'
@@ -295,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
     msg += `--------------------------------------\n`;
     msg += `👤 *Contato:* ${d.whatsapp} | ${d.email}\n`;
     msg += `🎯 *Segmento:* ${d.segmento}\n\n`;
+    msg += `🎨 *Identidade Visual & Cores Desejadas:*\n${d.cores || 'A critério do designer'}\n\n`;
     msg += `🛠️ *Serviços Oferecidos:*\n${d.servicos}\n\n`;
     msg += `📍 *Endereço:* ${d.endereco}\n\n`;
     msg += `⭐ *Diferenciais:*\n${d.diferenciais}\n\n`;

@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           item.whatsapp,
           item.email,
           item.endereco,
+          item.cores,
           item.diferenciais,
           item.quemSomos,
           item.infoAdicionais,
@@ -263,6 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="snippet-item">
           <span class="snippet-label">Serviços Oferecidos</span>
           <span class="snippet-content">${escapeHtml(item.servicos || 'Não informado')}</span>
+        </div>
+        <div class="snippet-item">
+          <span class="snippet-label">🎨 Cores & Identidade</span>
+          <span class="snippet-content" style="color: #ffaa55;">${escapeHtml(item.cores || 'A critério do designer')}</span>
         </div>
         <div class="snippet-item">
           <span class="snippet-label">Diferenciais Competitivos</span>
@@ -411,26 +416,34 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="detail-block-content">${escapeHtml(item.servicos)}</div>
         </div>
 
-        <!-- 4. Diferenciais -->
+        <!-- 4. Identidade Visual & Cores Desejadas -->
         <div class="detail-block">
           <div class="detail-block-title">
-            <span>4. Diferenciais Competitivos</span>
+            <span>🎨 4. Identidade Visual & Cores Desejadas</span>
+          </div>
+          <div class="detail-block-content" style="border-left: 3px solid var(--primary); padding-left: 12px; background: rgba(255, 102, 0, 0.05); color: #fff;">${escapeHtml(item.cores || 'A critério do designer')}</div>
+        </div>
+
+        <!-- 5. Diferenciais -->
+        <div class="detail-block">
+          <div class="detail-block-title">
+            <span>5. Diferenciais Competitivos</span>
           </div>
           <div class="detail-block-content">${escapeHtml(item.diferenciais)}</div>
         </div>
 
-        <!-- 5. Quem Somos -->
+        <!-- 6. Quem Somos -->
         <div class="detail-block">
           <div class="detail-block-title">
-            <span>5. Quem Somos (História & Autoridade)</span>
+            <span>6. Quem Somos (História & Autoridade)</span>
           </div>
           <div class="detail-block-content">${escapeHtml(item.quemSomos)}</div>
         </div>
 
-        <!-- 6. Informações Adicionais / Cases -->
+        <!-- 7. Informações Adicionais / Cases -->
         <div class="detail-block">
           <div class="detail-block-title">
-            <span>6. Informações Adicionais (Cases, Resultados, Depoimentos)</span>
+            <span>7. Informações Adicionais (Cases, Resultados, Depoimentos)</span>
           </div>
           <div class="detail-block-content">${escapeHtml(item.infoAdicionais)}</div>
         </div>
@@ -478,6 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
     text += `📞 WHATSAPP: ${item.whatsapp}\n`;
     text += `✉️ E-MAIL: ${item.email}\n`;
     text += `📍 ENDEREÇO: ${item.endereco}\n\n`;
+    text += `🎨 IDENTIDADE VISUAL & CORES:\n${item.cores || 'A critério do designer'}\n\n`;
     text += `--- SERVIÇOS OFERECIDOS ---\n${item.servicos}\n\n`;
     text += `--- DIFERENCIAIS DO NEGÓCIO ---\n${item.diferenciais}\n\n`;
     text += `--- QUEM SOMOS ---\n${item.quemSomos}\n\n`;
@@ -507,6 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
           email: 'contato@clinicaradiance.com.br',
           endereco: 'Av. Paulista, 1578 - Conjunto 1204 - Bela Vista, São Paulo - SP',
           semEnderecoFisico: false,
+          cores: 'Preto, Dourado suave e Off-White (Estilo boutique luxo e clean)',
           diferenciais: 'Ambiente boutique com atendimento VIP individualizado; Mais de 12 anos de experiência; Produtos importados com selo FDA e ANVISA; Simulação digital 3D antes de qualquer procedimento.',
           quemSomos: 'Fundada pela Dra. Camila Rocha, a Radiance Estética nasceu com o propósito de realçar a beleza natural através de procedimentos minimamente invasivos e tecnologia de ponta.',
           infoAdicionais: 'Mais de 3.500 pacientes transformadas; Nota 4.9 com mais de 380 avaliações 5 estrelas no Google Meu Negócio; Certificada pelo Instituto Internacional de Medicina Estética de Harvard.'
@@ -522,6 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
           email: 'juridico@almeidaeassociados.adv.br',
           endereco: 'Negócio 100% Digital / Sem endereço físico',
           semEnderecoFisico: true,
+          cores: 'Azul Marinho escuro, Cinza Platina e Branco (Corporativo sóbrio e imponente)',
           diferenciais: 'Atendimento ágil 100% digital para clientes no Brasil e exterior; Segurança jurídica completa com contratos sob medida; Sem jargões complicados.',
           quemSomos: 'Almeida & Associados é um escritório boutique com foco exclusivo em operações imobiliárias seguras e rentáveis.',
           infoAdicionais: 'Mais de R$ 150 Milhões em transações imobiliárias protegidas sem litígios nos últimos 3 anos.'

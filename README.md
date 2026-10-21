@@ -17,9 +17,10 @@ Sistema completo com formulário público de alta conversão para os clientes pr
 3. **Número para contato (WhatsApp)** (Com máscara automática e validação)
 4. **E-mail de contato**
 5. **Endereço físico** (Com opção de marcar como *Negócio 100% digital / Sem endereço físico*)
-6. **Diferenciais competitivos** (Por que o cliente deve escolher a empresa)
-7. **Quem somos** (História, missão, equipe e autoridade)
-8. **Informações adicionais** (Cases de sucesso, depoimentos, resultados métricos e empresas clientes atendidas)
+6. **Identidade Visual & Cores Desejadas** (Cores que o cliente quer na página, paletas rápidas ou manual de marca)
+7. **Diferenciais competitivos** (Por que o cliente deve escolher a empresa)
+8. **Quem somos** (História, missão, equipe e autoridade)
+9. **Informações adicionais** (Cases de sucesso, depoimentos, resultados métricos e empresas clientes atendidas)
 
 ---
 
